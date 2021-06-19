@@ -5,11 +5,12 @@ function Navigation() {
   return (
     <nav>
       <ul className="d-flex justify-content-between align-items-center px-4 py-2">
-        <StaticLink href="/" className="fs-4">eternaloptimist.life</StaticLink>
-        <StaticLink href="/about">about</StaticLink>
-        <StaticLink href="/coding">coding</StaticLink>
-        <StaticLink href="/philosophy">philosophy</StaticLink>
-        <StaticLink href="/psychology">psychology</StaticLink>
+        <StaticLink href="/" className="fs-4" disableUnderline>eternaloptimist.life</StaticLink>
+        <StaticLink href="/about" disableUnderline>about</StaticLink>
+        <StaticLink href="/coding" disableUnderline>coding</StaticLink>
+        <StaticLink href="/music" disableUnderline>music</StaticLink>
+        <StaticLink href="/philosophy" disableUnderline>philosophy</StaticLink>
+        <StaticLink href="/psychology" disableUnderline>psychology</StaticLink>
       </ul>
     </nav>
   )

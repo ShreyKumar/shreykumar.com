@@ -1,0 +1,9 @@
+.underline {
+  height: 1px;
+  background-color: black;
+  width: 100%;
+  margin-top: 5px;
+}
+a:hover .underline {
+  background-color: #0a58ca;
+}
