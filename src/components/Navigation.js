@@ -8,7 +8,7 @@ function Navigation() {
         <StaticLink href="/" className="fs-4" disableUnderline>eternaloptimist.life</StaticLink>
         <StaticLink href="/about" disableUnderline>about</StaticLink>
         <StaticLink href="/coding" disableUnderline>coding</StaticLink>
-        <StaticLink href="/music" disableUnderline>music</StaticLink>
+        <StaticLink href="/self-development" disableUnderline>self-development</StaticLink>
         <StaticLink href="/philosophy" disableUnderline>philosophy</StaticLink>
         <StaticLink href="/psychology" disableUnderline>psychology</StaticLink>
       </ul>
