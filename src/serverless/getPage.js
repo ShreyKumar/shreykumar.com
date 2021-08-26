@@ -10,10 +10,32 @@ export async function getGenericPageBySlug (slug) {
     'fields.slug': slug
   })
 
-  return genericPageReducer(genericPage)
+  return ctnEntryReducer(genericPage)
 }
 
-export function genericPageReducer (genericPage) {
-  return genericPage?.items?.[0]?.fields?.content ?? {}
+export async function getBlogEntryBySlug (slug) {
+  const blogEntry = await client.getEntries({
+    content_type: 'blogEntry',
+    'fields.slug': slug
+  })
+
+  return ctnEntryReducer(blogEntry)
+}
+
+export async function getBlogEntriesByCategory (category) {
+  const blogEntries = await client.getEntries({
+    content_type: 'blogEntry',
+    'fields.category': category
+  })
+
+  return ctnEntriesReducer(blogEntries)
+}
+
+export function ctnEntriesReducer (result) {
+  return result?.items?.map(({ fields }) => fields) ?? null
+}
+
+export function ctnEntryReducer (result) {
+  return result?.items?.[0]?.fields?.content ?? null
 }
 
